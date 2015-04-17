@@ -1,0 +1,23 @@
+<head>
+  <title>Meteor camera</title>
+</head>
+
+<body>
+  <h1>随时分享身边的精彩瞬间！</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>点击此处上传图片</button>
+  <p>点击图片可以删除图片</p>
+  <p>
+  	
+  	{{#each pictures}}
+  	<div>
+  		<img data-id={{_id}} class="small-image" src="{{pic}}"/><br/><span>{{time}}</span>
+  	</div>
+  	{{/each}}
+  </p>
+
+</template>
